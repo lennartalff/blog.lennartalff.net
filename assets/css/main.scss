@@ -12,7 +12,8 @@
 
 
 $link-color: #00fffc;
-
+$text-color: #acacac;
+$background-color: #272727;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
 .page__content {
