@@ -1,5 +1,6 @@
 ---
 ---
+
 // $serif: Georgia, Times, serif !default;
 // $sans-serif: -apple-system, BlinkMacSystemFont, "DejaVu Sans", "Roboto", "Segoe UI",
 //   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
@@ -8,6 +9,10 @@
 // $global-font-family: $serif;
 // $header-font-family: $serif;
 // $caption-font-family: $serif;
+
+
+$link-color: #00fffc;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
 .page__content {

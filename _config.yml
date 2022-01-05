@@ -35,6 +35,7 @@ theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-tabs
 
 minimal_mistakes_skin: "dark"
 teaser: /assets/images/default_teaser.png
