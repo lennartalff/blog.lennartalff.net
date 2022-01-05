@@ -12,7 +12,7 @@ $caption-font-family: $serif;
 
 
 $link-color: #00fffc;
-$text-color: #acacac;
+$text-color: #cccccc;
 $background-color: #272727;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
