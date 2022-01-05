@@ -48,6 +48,7 @@ defaults:
     values:
       layout: "single"
       toc_sticky: true
+      show_date: true
       # header:
       #   overlay_image: /assets/images/default_splash.png
 
