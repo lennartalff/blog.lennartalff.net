@@ -7,7 +7,6 @@ categories: Software
 tags: ["software", "server"]
 toc: true
 author: Thies Lennart Alff
-author_profile: true
 # header:
 #     overlay_image: /assets/images/ov9281_b0165.jpg
 #     overlay_filter: 0.5
