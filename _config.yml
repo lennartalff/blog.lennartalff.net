@@ -37,7 +37,8 @@ plugins:
   - jekyll-paginate
   - jekyll-tabs
 
-minimal_mistakes_skin: "dark"
+# minimal_mistakes_skin: "dark"
+# minimal_mistakes_skin: "air"
 teaser: /assets/images/default_teaser.png
 
 defaults:

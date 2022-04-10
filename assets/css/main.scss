@@ -2,22 +2,44 @@
 ---
 
 $serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "DejaVu Sans", "Roboto", "Segoe UI",
+$sans-serif: -apple-system, BlinkMacSystemFont, "Open Sans", "DejaVu Sans", "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
-$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+$monospace: "DejaVu Sans Mono", Consolas, "Lucida Console", monospace !default;
 
 $global-font-family: $sans-serif;
 $header-font-family: $sans-serif;
 $caption-font-family: $sans-serif;
 
-$link-color: #00fffc;
-$text-color: #cccccc;
-$background-color: #272727;
+// $link-color: #00fffc;
+// $text-color: #cccccc;
+// $background-color: #272727;
+
+$base00: #fafafa;
+$base01: #e0e0e0;
+$base02: #d0d0d0;
+$base03: #b0b0b0;
+$base04: #000000;
+$base05: #101010;
+$base06: #151515;
+$base07: #202020;
+$base08: #ff0086;
+$base09: #fd8900;
+$base0a: #aba800;
+$base0b: #00c918;
+$base0c: #1faaaa;
+$base0d: #3777e6;
+$base0e: #ad00a1;
+$base0f: #cc6633;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
-.page__content {
-  text-align: justify;
+// .page__content {
+//   text-align: justify;
+// }
+
+article.page {
+  float: left;
+  width: 100%;
 }
 
 html {
@@ -35,3 +57,5 @@ html {
     font-size: 16px; // change to whatever
   }
 }
+
+
