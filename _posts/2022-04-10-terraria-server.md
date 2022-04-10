@@ -14,11 +14,11 @@ author: Thies Lennart Alff
 ---
 One of the conveniences of having a (physical) private server available is that we can quickly spin up a dedicated game server. Even if we want to play the game together with some friends just for a few days before quitting it again (not that unlikely, is it?).
 
-# Get Your Stuff Together
+## Get Your Stuff Together
 
 Download the dedicated server from the [Terraria Wiki](https://terraria.fandom.com/wiki/Server). All information to start the server are provided there as well. The relevant steps here are to create a `serverconfig.txt` and we should not forget to forward the port used by Terraria. By default this is `7777`.
 
-# Configure the systemd Daemon
+## Configure the systemd Daemon
 
 These steps are heavily inspired by the [linode guide](https://www.linode.com/docs/guides/host-a-terraria-server-on-your-linode/).
 

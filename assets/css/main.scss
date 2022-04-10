@@ -10,10 +10,12 @@ $global-font-family: $sans-serif;
 $header-font-family: $sans-serif;
 $caption-font-family: $sans-serif;
 
+// // set font colors
 // $link-color: #00fffc;
 // $text-color: #cccccc;
 // $background-color: #272727;
 
+// // color palette for code highlighting
 $base00: #fafafa;
 $base01: #e0e0e0;
 $base02: #d0d0d0;
@@ -33,15 +35,26 @@ $base0f: #cc6633;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes";
+
+// // "Blocksatz"
 // .page__content {
 //   text-align: justify;
 // }
 
+// Avoid left side gap caused by author profile space.
 article.page {
   float: left;
   width: 100%;
 }
 
+
+// // make headers normal instead of bold
+// h1, h2, h3, h4, h5, h6 {
+//   font-weight: normal
+// }
+
+
+// set font size
 html {
   font-size: 12px; // change to whatever
 
