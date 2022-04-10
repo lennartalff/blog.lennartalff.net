@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "Terraria Server"
+excerpt: "One of the conveniences of having a (physical) private server available is that we can quickly spin up a dedicated game server. Even if we want to play the game together with some friends just for a few days before quitting it again (not that unlikely, is it?). With systemd it is quite easy to automatically start the server after reboots to avoid the necessity of starting the server manually."
 date:   2022-04-10
 last_modified_at: 2022-01-05T23:36:54
 categories: Software
@@ -12,7 +13,7 @@ author: Thies Lennart Alff
 #     overlay_filter: 0.5
 
 ---
-One of the conveniences of having a (physical) private server available is that we can quickly spin up a dedicated game server. Even if we want to play the game together with some friends just for a few days before quitting it again (not that unlikely, is it?).
+
 
 ## Get Your Stuff Together
 
