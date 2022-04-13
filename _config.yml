@@ -36,6 +36,10 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-tabs
+  - jekyll-last-modified-at
+
+last-modified-at:
+  date-format: '%Y-%m-%d'
 
 # minimal_mistakes_skin: "dark"
 # minimal_mistakes_skin: "air"
