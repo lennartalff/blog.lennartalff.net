@@ -32,48 +32,48 @@ But how can we tell, which files on the storage device are affected by non-recov
 * compare the pre-fill and post-fill MD5 sums to determine possibly damaged files
 
 {%- highlight sh -%}
-    sudo losetup --partscan --find --show /rescue.img
+sudo ddrescue --fill=- /dev/zero /rescue.img /rescue.map
 {%- endhighlight -%}
 
 {%- highlight sh -%}
-    sudo mkdir /sdcard
-    sudo mount /dev/loop0p1 /sdcard
+sudo losetup --partscan --find --show /rescue.img
 {%- endhighlight -%}
 
 {%- highlight sh -%}
-        find /sdcard -type f -print0 | xargs -0 md5sum > ~/pre-fill.md5
+sudo mkdir /sdcard
+sudo mount /dev/loop0p1 /sdcard
+{%- endhighlight -%}
+
+{%- highlight sh -%}
+find /sdcard -type f -print0 | xargs -0 md5sum > ~/pre-fill.md5
 {%- endhighlight -%}
 
 Repeat for the refilled image
 
 {%- highlight sh -%}
-        sudo umount /sdcard
-        sudo losetup -d /dev/loop0
+sudo umount /dev/loop0
+sudo losetup -d /dev/loop0
 {%- endhighlight -%}
 
 {%- highlight sh -%}
-        echo -n "BAD DATA" > /tmp/tmpfile
-        sudo ddrescue --fill=- /tmp/tmpfile rescue.img rescue.map
-{%- endhighlight -%}
-
-{%- highlight sh -%}
-        code
+echo -n "BAD DATA" > /tmp/tmpfile
+sudo ddrescue --fill=- /tmp/tmpfile /rescue.img /rescue.map
 {%- endhighlight -%}
 
 Repeat the steps for creating the loop device and mounting it. Compute the new MD5 sum.
 
 {%- highlight sh -%}
-    find /sdcard -type f -print0 | xargs -0 md5sum > ~/post-fill.md5
+find /sdcard -type f -print0 | xargs -0 md5sum > ~/post-fill.md5
 {%- endhighlight -%}
 
 Compare the hashes and count changed files
 
 {%- highlight sh -%}
-    diff prefill.md5 postfill.md5 | grep "^>" | wc -l
+diff pre-fill.md5 post-fill.md5 | grep "^>" | wc -l
 {%- endhighlight -%}
 
 To extract a file list of these potentially corrupted files execute
 
 {%- highlight sh -%}
-    diff prefill.md5 postfill.md5 | grep "^>" | sed -E 's;.* /sdcard/(.*);\1;' > damaged_files.txt
+diff pre-fill.md5 post-fill.md5 | grep "^>" | sed -E 's;.* /sdcard/(.*);\1;' > damaged_files.txt
 {%- endhighlight -%}
