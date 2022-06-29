@@ -11,6 +11,7 @@ author: Thies Lennart Alff
 header:
     overlay_image: /assets/images/efibootmgr.png
     overlay_filter: 0.5
+    teaser: /assets/images/efibootmgr.png
 
 ---
 
